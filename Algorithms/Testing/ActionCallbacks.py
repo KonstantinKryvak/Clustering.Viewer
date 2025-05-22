@@ -169,8 +169,8 @@ def DoClusteringCallback(sender, app_data, user_data):
     if not metric:
         metric = lambda p1, p2: numpy.sqrt(sum((x - y) ** 2 for x, y in zip(p1, p2)))
 
-    dpg.configure_item('btn_gen', enabled=False)
-    dpg.configure_item('do_cls',  enabled=False)
+    dpg.hide_item('btn_gen')
+    dpg.hide_item('do_cls')
 
     args = []
     for tag in dpg.get_item_children('cls_alg_opts', slot=1):
@@ -189,8 +189,8 @@ def DoClusteringCallback(sender, app_data, user_data):
 
     for key, values in clusters.items():
         dpg.add_scatter_series(parent='y_axis', x=[x for x, _ in values], y=[y for _, y in values], label='Визначені як шум' if (key == -1) else f'Кластер No. {key + 1}')
-
-    dpg.configure_item('btn_gen', enabled=True)
-    dpg.configure_item('do_cls',  enabled=True)
+    
+    dpg.show_item('btn_gen')
+    dpg.show_item('do_cls')
 
 

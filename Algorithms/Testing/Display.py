@@ -33,17 +33,6 @@ def SetupInitialLayout(metrics, algorithms):
                     dpg.add_separator(label='Генерація Тестових Наборів')
                     
                     dpg.add_spacer()
-                    dpg.add_text('Ліміт амплітуди генерації:')
-                    
-                    dpg.add_spacer()
-                    with dpg.group(horizontal=True):
-                        dpg.add_text('Для вісі OX:')
-                        dpg.add_input_float(tag='ox_limit', default_value=20.0, min_value=1.0, max_value=1000.0, width=-1)
-                    with dpg.group(horizontal=True):
-                        dpg.add_text('Для вісі OY:')
-                        dpg.add_input_float(tag='oy_limit', default_value=20.0, min_value=1.0, max_value=1000.0, width=-1)
-                    
-                    dpg.add_spacer()
                     dpg.add_text('Кількість об\'єктів (N):')
                     dpg.add_input_int(tag='amount', default_value=250, min_value=0, width=-1)
                     
