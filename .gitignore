@@ -1,0 +1,16 @@
+
+
+# ignore everything.
+*
+
+# except for python files in 'Algorithms' folder,
+!*.py
+!Algorithms/
+!Algorithms/DistanceMetrics/
+!Algorithms/Testing/
+
+# '.gitignore' itself and markdown.
+!.gitignore
+!*.md
+
+
